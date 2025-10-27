@@ -4,13 +4,15 @@ spring:
     name: lab-4-article
   config:
     import: "optional:configserver:http://localhost:8001"
+  profiles:
+    active: article
 
 # eureka:
 #   client:
 #     serviceUrl:
 #       defaultZone: http://localhost:8010/eureka/
 
-words: a,the
+# words: a,the
 
 server:
   port: ${PORT:${SERVER_PORT:0}}
